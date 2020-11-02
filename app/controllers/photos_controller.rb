@@ -19,4 +19,13 @@ class PhotosController < ApplicationController
   redirect_to("/photos")
   end
 
+  def create
+  p = Photo.new
+  p.image = params.fetch("input_image")
+  p.caption = params.fetch("input_caption")
+  p.owner_id = params.fetch("input_owner_id")
+  p.save
+  redirect_to("/photos/" + p.id.to_s)
+  end
+
 end
