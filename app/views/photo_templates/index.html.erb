@@ -16,8 +16,9 @@
     <th> <%=a_photo.caption%> </th>
     <th> <%=a_photo.poster.username%> </th>
     <th> <%=a_photo.created_at%> </th>
-    <th>  </th>
+    <th> <a href="/photos/<%= a_photo.id %>"> Show details </a> </th>
   </tr>
+  
 <%end%>
 
 
