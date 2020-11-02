@@ -1,0 +1,24 @@
+<h1> List of photos </h1>
+
+<table border="1">
+  <tr>
+    <th> Image </th>
+    <th> Caption </th>
+    <th> Owner </th>
+    <th> Posted </th>
+    <th>  </th>
+  </tr>
+
+<% @list_of_photos.each do |a_photo|%>
+
+  <tr>
+    <th> <img src="<%=a_photo.image%>"> </th>
+    <th> <%=a_photo.caption%> </th>
+    <th> <%=a_photo.poster.username%> </th>
+    <th> <%=a_photo.created_at%> </th>
+    <th>  </th>
+  </tr>
+<%end%>
+
+
+</table>
