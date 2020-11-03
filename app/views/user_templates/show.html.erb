@@ -4,7 +4,11 @@
   <dt> ID </dt>
   <dd> <%=@the_user.id%> </dd>
   <dt> Edit user </dt>
-  <dd> Form </dd>
+  <dd> <form action="/edit_user/<%=@the_user.id%>">
+<label for="browser_input"> Username </label>
+<input id="browser_input" type="text" name="input_username" value="<%=@the_user.username%>">
+<button> Update user </button> 
+</form> </dd>
 
 </dl>
 
